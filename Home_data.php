@@ -12,12 +12,15 @@
 <body>
     <div class="main">
         <div class="head">
-            <h1>Tasks Info Form</h1>
+            <h1>Schedule</h1>
+        </div>
+        <div class="notice">
+            <p>Create your Schedule</p>
         </div>
         <div class="taskForm">
             <form action="data.php" method="post" class="mform">
                 <div class="t_name">
-                    <label for="tname">Task Name :- </label>
+                    <label for="tname">Task Title :- </label>
                     <input type="text" name="tname" placeholder="Enter Task Name">
                 </div>
                 <div class="t_desc">

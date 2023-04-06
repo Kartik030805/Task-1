@@ -33,3 +33,8 @@
   justify-content: center;
   row-gap: 35px;
 }
+
+p {
+  font-size: 12px;
+  opacity: 0.6;
+}

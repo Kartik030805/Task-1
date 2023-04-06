@@ -13,7 +13,7 @@
 <body>
   <div class="main">
     <div class="head">
-      <h1>To Do List for Tasks</h1>
+      <h1>Schedule Tasks</h1>
     </div>
     <div class="data_table">
       <?php
