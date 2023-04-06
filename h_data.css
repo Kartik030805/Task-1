@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.main {
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+}
+
+.taskForm {
+  display: grid;
+  justify-content: center;
+}
+
+.t_desc {
+  display: flex;
+  justify-content: center;
+}
+
+.mform {
+  display: grid;
+  justify-content: center;
+  row-gap: 35px;
+}
