@@ -1,3 +1,7 @@
+<?php
+require_once "Navbar/nav.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>To Do List of Tasks</title>
-  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="CSSs/home.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 
@@ -18,7 +22,7 @@
     <div class="data_table">
       <?php
 
-      $con = mysqli_connect("localhost", "root", "", "task1");
+      require "Database/Connection.php";
       $rft = "SELECT  * FROM `taskInfo`";
       $rd = mysqli_query($con, $rft);
       $r = mysqli_num_rows($rd);
@@ -56,7 +60,7 @@
       ?>
     </div>
     <div class="Buttons">
-      <a href="Home_data.php"><button>Add Tasks</button></a>
+      <a href="2_Form.php"><button>Add Tasks</button></a>
     </div>
   </div>
 

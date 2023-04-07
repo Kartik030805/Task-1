@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost", "root", "", "task1");
+require  "Database/Connection.php";
 
 $tname = $_POST['tname'];
 $tdesc = $_POST['tdescription'];
@@ -14,7 +14,7 @@ if ($idit) {
         <body>
         <script>
             alert('Data inserted successfully!!');
-            location.href = 'Home.php';
+            location.href = '1_Home.php';
         </script>
         </body>
     </html>";
@@ -24,7 +24,7 @@ if ($idit) {
         <body>
         <script>
             alert('Try again !!!');
-            location.href = 'Home.php';
+            location.href = '1_Home.php';
         </script>
         </body>
     </html>";

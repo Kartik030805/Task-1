@@ -1,3 +1,7 @@
+<?php
+require_once "Navbar/nav.php"
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Take Info of Task</title>
-    <link rel="stylesheet" href="h_data.css">
+    <link rel="stylesheet" href="CSSs/form.css">
 </head>
 
 <body>
@@ -18,7 +22,7 @@
             <p>Create your Schedule</p>
         </div>
         <div class="taskForm">
-            <form action="data.php" method="post" class="mform">
+            <form action="3_Insert.php" method="post" class="mform">
                 <div class="t_name">
                     <label for="tname">Task Title :- </label>
                     <input type="text" name="tname" placeholder="Enter Task Name">
