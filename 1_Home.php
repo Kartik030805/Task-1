@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $num = mysqli_num_rows($result);
   if ($num == 1) {
 
-    $sql = "DELETE FROM `taskinfo` WHERE `t_id` = '1';";
+    $sql = "DELETE FROM `taskinfo` WHERE `t_id` = '$tid';";
     $result = mysqli_query($con, $sql);
 
     echo "
