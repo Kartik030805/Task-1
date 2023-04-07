@@ -8,25 +8,25 @@
 }
 
 .main {
-  display: flex;
-  width: 100%;
-  height: 90vh;
-  flex-direction: column;
-  align-items: center;
-  margin: 30px auto;
-  row-gap: 40px;
+  margin: 40px auto;
 }
 
-.head h1 {
+.t-a-center {
   text-align: center;
 }
 
-.data_table {
-  width: 75%;
+.mform {
+  width: 40%;
+  margin: 20px auto;
 }
 
-.empty p {
-  font-size: 25px;
+.mform input {
+  margin-bottom: 15px;
+}
+
+.uhead {
   text-align: center;
-  opacity: 0.5;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
