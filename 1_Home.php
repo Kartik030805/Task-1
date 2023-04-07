@@ -1,5 +1,39 @@
 <?php
-require_once "Navbar/nav.php"
+require_once "Navbar/nav.php";
+require_once "Database/Connection.php";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $tid = $_POST['dtid'];
+
+  $sql = "SELECT * FROM `taskInfo` WHERE t_id = '$tid'";
+  $result = mysqli_query($con, $sql);
+  $num = mysqli_num_rows($result);
+  if ($num == 1) {
+
+    $sql = "DELETE FROM `taskinfo` WHERE `t_id` = '1';";
+    $result = mysqli_query($con, $sql);
+
+    echo "
+      <html>
+          <body>
+              <div class='alert alert-success alert-dismissible fade show' role='alert'>
+                  <strong>Success </strong> Your task deleted successfully.
+                  <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+              </div>
+          </body>
+      </html>";
+  } else {
+    echo "
+      <html>
+          <body>
+               <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                   <strong>Warning </strong> Your task id is doesn't exist.
+                      <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+              </div>
+          </body>
+      </html>";
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +48,7 @@ require_once "Navbar/nav.php"
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="bg-light">
   <div class="main">
     <div class="head">
       <h1>Schedule Tasks</h1>
@@ -64,8 +98,33 @@ require_once "Navbar/nav.php"
     <div class="Buttons">
       <a href="2_Form.php"><button type="button" class="btn btn-primary">Add Task</button></a>
       <a href="3_Update.php"><button type="button" class="btn btn-primary">Update Task</button></a>
-      <a href="4_Delete.php"><button type="button" class="btn btn-primary">Delete Task</button></a>
+      <form action="./1_Home.php" method="get" class="dform"><input class="btn btn-primary" type="submit" value="Delete Task"></form>
     </div>
+
+    <?php
+    if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+      echo "
+      <div class='delete'>
+      <div class='head t-a-center'>
+        <h1>Schedule Delete</h1>
+      </div>
+      <section class='container'>
+        <form class='mform' action='./1_Home.php' method='post'>
+          <div class='mg-auto'>
+            <label for='dtid' class='form-label'>Task Id</label>
+            <div class='input-group mb-3'>
+              <input type='text' name='dtid' class='form-control' placeholder='Enter your id for delete'>
+              <input class='btn btn-primary' type='submit' value='Submit'>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+        ";
+    }
+    ?>
+
+
   </div>
 
 

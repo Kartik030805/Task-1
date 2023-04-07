@@ -9,8 +9,8 @@
 
 </head>
 
-<body>
-    <nav class="navbar dark navbar-expand-lg bg-body-tertiary">
+<body class="">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Schedule'z</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,9 +26,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="3_Update.php">Update-Task</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="4_Delete.php">Delete-Task</a>
                     </li>
                 </ul>
             </div>
