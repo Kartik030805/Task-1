@@ -113,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <div class='mg-auto'>
             <label for='dtid' class='form-label'>Task Id</label>
             <div class='input-group mb-3'>
-              <input type='text' name='dtid' class='form-control' placeholder='Enter your id for delete'>
+              <input type='number' min='0' max='1000' name='dtid' class='form-control' placeholder='Enter your id for delete'>
               <input class='btn btn-primary' type='submit' value='Submit'>
             </div>
           </div>

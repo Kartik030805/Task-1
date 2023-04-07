@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <form class="row g-3" action="./2_Form.php" method="post">
                     <div class="col-md-6">
                         <label for="tid" class="form-label">Task Id</label>
-                        <input type="text" class="form-control" name="tid" required placeholder="Enter task id">
+                        <input type="number" min="0" max="1000" class="form-control" name="tid" required placeholder="Enter task id">
                     </div>
                     <div class="col-md-6">
                         <label for="tname" class="form-label">Task title</label>

@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <form class="mform" action="./3_Update.php" method="post">
                 <div class="col-md-8">
                     <label for="utid" class="form-label">Task Id</label>
-                    <input type="text" class="form-control" name="utid" required placeholder="Enter task id">
+                    <input type="number" min="0" max="1000" class="form-control" name="utid" required placeholder="Enter task id">
                 </div>
                 <div class="uhead">
                     <h4>Now, Enter your new task information</h4>
